@@ -1,24 +1,18 @@
 #include<iostream>
 using namespace std;
 
-// int x = 5;  # Global variable
-
-int fun(int n)
+void fun(int n)
 {
-    static int x = 0;
     if (n > 0)
     {
-        x++;
-        return fun(n-1) + x;
+        cout << n;
+        fun(n-1);
+        fun(n-1);
     }
-    return 0;
 }
-
 
 int main()
 {
-    // static int x = 0;
-    int a = 5;
-    cout << fun(a);
+    fun(3);
     return 0;
 }
