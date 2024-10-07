@@ -24,10 +24,6 @@ class Choice
                 cout << "Enter the element on index " << i << " = ";
                 cin >> arr[i];
             }
-            for(; i < len; i++)
-            {
-                arr[i] = 0;
-            }
         }
 
         ~Choice()
@@ -64,12 +60,12 @@ class Choice
                     arr[i+1] = arr[i];
                 }
                 arr[i+1] = value;
+                len++;
             }
             else
             {
                 cout << "Incorrect index" << endl;
             }
-            len++;
         }
 
         void display()
